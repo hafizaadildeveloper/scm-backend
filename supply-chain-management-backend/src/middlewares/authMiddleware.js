@@ -12,17 +12,3 @@ export const verifyToken = (req, res, next) => {
         next();
     });
 };
-
-// export const verifyToken = (req, res, next) => {
-//     const token = req.headers.authorization.split(" ")[1];
-//     jwt.verify(token, process.env.SECRET_KEY, (err, decoded) => {
-//         console.log("decoded", decoded);
-//         if (err) {
-//             console.log(err);
-//             res.status(401).send({ message: "Unauthorized!", success: false });
-//         } else {
-//             req.decoded = decoded;
-//             next();
-//         }
-//     });
-// };
